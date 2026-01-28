@@ -140,11 +140,11 @@ export const Form: React.FunctionComponent<FormProps> = ({ config, onSubmit, onS
 			</div>
 
 			<div className={styles.buttons}>
-				<Button variant="secondary" onClick={handleSkip}>
-					Skip
-				</Button>
 				<Button variant="primary" disabled={!isValid()} onClick={handleSubmit}>
 					Submit
+				</Button>
+				<Button variant="secondary" onClick={handleSkip}>
+					Skip
 				</Button>
 			</div>
 
