@@ -279,8 +279,8 @@ export async function serveFormAndAwaitResponse (config: FormConfig): Promise<Fo
 }
 
 /** Default window size for app mode */
-const APP_WINDOW_WIDTH = 500;
-const APP_WINDOW_HEIGHT = 600;
+const APP_WINDOW_WIDTH = 680;
+const APP_WINDOW_HEIGHT = 660;
 
 /**
  * Gets screen dimensions for centering the window.
