@@ -42,16 +42,16 @@ Choose the setup guide for your AI application:
 1. Open your project folder in VS Code
 2. Create or edit the file `.vscode/mcp.json`:
 
-```json
-{
-  "servers": {
-    "popup-ui": {
-      "command": "npx",
-      "args": ["mcp-popup-ui"]
-    }
-  }
-}
-```
+   ```json
+   {
+     "servers": {
+       "popup-ui": {
+         "command": "npx",
+         "args": ["mcp-popup-ui"]
+       }
+     }
+   }
+   ```
 
 3. Restart VS Code or reload the window
 
@@ -61,14 +61,14 @@ Choose the setup guide for your AI application:
 2. Navigate to the MCP Servers section
 3. Add a new server with these settings:
 
-```json
-{
-  "mcp-popup-ui": {
-    "command": "npx",
-    "args": ["mcp-popup-ui"]
-  }
-}
-```
+   ```json
+   {
+     "mcp-popup-ui": {
+       "command": "npx",
+       "args": ["mcp-popup-ui"]
+     }
+   }
+   ```
 
 4. Enable the server and start a new chat
 
