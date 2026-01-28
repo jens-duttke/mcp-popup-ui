@@ -28,7 +28,7 @@ npm install -g mcp-popup-ui
 Or run directly without installing:
 
 ```bash
-npx mcp-popup-ui
+npx y- mcp-popup-ui
 ```
 
 **Requirements:** Node.js 18 or higher.
