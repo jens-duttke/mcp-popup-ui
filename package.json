@@ -1,6 +1,6 @@
 {
 	"name": "mcp-popup-ui",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "MCP server that provides interactive popup UI tools for user input collection",
 	"type": "module",
 	"main": "dist/index.js",
