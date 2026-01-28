@@ -7,8 +7,9 @@
 	transition: border-color 100ms ease;
 
 	border: 1px solid #3c3c3c;
+	border-radius: 6px;
 
-	background: #3c3c3c;
+	background: #222;
 
 	color: #ccc;
 
