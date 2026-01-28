@@ -14,7 +14,7 @@
 		"dist"
 	],
 	"scripts": {
-		"build": "tsc --project mcp/tsconfig.json && vite build",
+		"build": "rimraf dist && tsc --project mcp/tsconfig.json && vite build",
 		"dev": "vite --open",
 		"test:server": "node scripts/test-server.mjs",
 		"lint": "lint tsc --tsconfig=\"./frontend/tsconfig.json\" && lint tsc --tsconfig=\"./mcp/tsconfig.json\"  && lint --tsconfig=\"./tsconfig.node.json\" ts css --include=\"frontend/**/*.css\" md audit"
@@ -47,9 +47,10 @@
 		"@types/react": "19.2.10",
 		"@types/react-dom": "19.2.3",
 		"@vitejs/plugin-react": "5.1.2",
-		"linter-bundle": "^7.11.0",
+		"linter-bundle": "7.11.0",
 		"react": "19.2.4",
 		"react-dom": "19.2.4",
+		"rimraf": "6.1.2",
 		"typescript": "5.9.3",
 		"vite": "7.3.1"
 	},
