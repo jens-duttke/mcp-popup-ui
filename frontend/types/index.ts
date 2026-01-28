@@ -22,6 +22,7 @@ export type Option = string | OptionWithDescription;
 /** Normalized option - always an object with at least a label */
 export interface NormalizedOption {
 	label: string;
+	value?: string;
 	description?: string;
 	recommended?: boolean;
 }

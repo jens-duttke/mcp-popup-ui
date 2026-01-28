@@ -1,9 +1,8 @@
 import * as React from 'react';
 
-import { MarkdownText } from '@frontend/components/MarkdownText';
+import { OptionItem } from '@frontend/components/OptionItem';
 import { Textarea } from '@frontend/components/Textarea';
 import type { NormalizedOption, Option } from '@frontend/types';
-import { dispatchClickOnActionKey } from '@frontend/utils/dispatchClickOnActionKey';
 
 import * as styles from './styles.module.css';
 
@@ -91,74 +90,27 @@ export const OptionGroup: React.FunctionComponent<OptionGroupProps> = ({
 			{options.map((option, index) => {
 				const normalized = normalizeOption(option);
 				const isSelected = selectedValues.includes(normalized.label);
-				const hasDescription = Boolean(normalized.description);
-				const isRecommended = Boolean(normalized.recommended);
-
-				const optionClasses = [
-					styles.option, (
-          isSelected ? styles.selected : ''), (
-          hasDescription ? styles.hasDescription : ''), (
-          isRecommended ? styles.recommended : '')
-				].filter(Boolean).join(' ');
 
 				return (
-					<div
+					<OptionItem
 						key={index}
-						role="button"
-						tabIndex={0}
-						className={optionClasses}
-						onClick={() => handleOptionClick(normalized.label)}
-						onKeyDown={dispatchClickOnActionKey}
-					>
-						<div className={styles.optionMain}>
-							<input
-								type={(isRadio ? 'radio' : 'checkbox')}
-								className={styles.input}
-								checked={isSelected}
-								name="option"
-								onChange={() => { /* Required for controlled input; actual handling via div click */ }}
-							/>
-							<label className={styles.label}>
-								<MarkdownText text={normalized.label} />
-								{(isRecommended && <span className={styles.recommendedBadge}>Recommended</span>)}
-							</label>
-							<button
-								type="button"
-								className={styles.explainButton}
-								title={`Explain option "${normalized.label}"`}
-								aria-label={`Explain option "${normalized.label}"`}
-								onClick={(event) => handleExplainClick(event, normalized.label)}
-							>
-								?
-							</button>
-						</div>
-						{(hasDescription && normalized.description && (
-							<div className={styles.description}><MarkdownText text={normalized.description} /></div>
-						))}
-					</div>
+						option={normalized}
+						isRadio={isRadio}
+						isSelected={isSelected}
+						onSelect={handleOptionClick}
+						onExplain={handleExplainClick}
+					/>
 				);
 			})}
 
 			{(allowOther && (
 				<React.Fragment>
-					<div
-						role="button"
-						tabIndex={0}
-						className={`${styles.option} ${(isOtherSelected ? styles.selected : '')}`}
-						onClick={() => handleOptionClick('__other__')}
-						onKeyDown={dispatchClickOnActionKey}
-					>
-						<div className={styles.optionMain}>
-							<input
-								type={(isRadio ? 'radio' : 'checkbox')}
-								className={styles.input}
-								checked={isOtherSelected}
-								name="option"
-								onChange={() => { /* Required for controlled input; actual handling via div click */ }}
-							/>
-							<label className={styles.label}><MarkdownText text={otherLabel} /></label>
-						</div>
-					</div>
+					<OptionItem
+						option={{ label: otherLabel, value: '__other__' }}
+						isRadio={isRadio}
+						isSelected={isOtherSelected}
+						onSelect={handleOptionClick}
+					/>
 					{(isOtherSelected && (
 						<div className={styles.otherContainer}>
 							<Textarea
