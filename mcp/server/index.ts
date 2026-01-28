@@ -91,9 +91,17 @@ export function createServer (): McpServer {
 
 					const result = await executeAskUser(args);
 
-					const textContent = (result.action === 'submit' ?
-            `User selected: ${result.selection}`
-            : 'User skipped the selection');
+					let textContent: string;
+
+					if (result.action === 'submit') {
+						textContent = `User selected: ${result.selection}`;
+					}
+					else if (result.action === 'request_explanation') {
+						textContent = (result.explainMessage ?? `User requested explanation for: ${result.explainOption}`);
+					}
+					else {
+						textContent = 'User skipped the selection';
+					}
 
 					return {
 						content: [
@@ -113,9 +121,17 @@ export function createServer (): McpServer {
 
 					const result = await executeAskUserMultiple(args);
 
-					const textContent = (result.action === 'submit' ?
-            `User selected: ${result.selections?.join(', ')}`
-            : 'User skipped the selection');
+					let textContent: string;
+
+					if (result.action === 'submit') {
+						textContent = `User selected: ${result.selections?.join(', ')}`;
+					}
+					else if (result.action === 'request_explanation') {
+						textContent = (result.explainMessage ?? `User requested explanation for: ${result.explainOption}`);
+					}
+					else {
+						textContent = 'User skipped the selection';
+					}
 
 					return {
 						content: [
