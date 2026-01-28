@@ -1,0 +1,76 @@
+.container {
+	width: 100%;
+
+	padding: 20px 24px;
+
+	border: 1px solid #3c3c3c;
+
+	background: #252526;
+}
+
+.header {
+	margin-bottom: 20px;
+
+	padding-bottom: 12px;
+
+	border-bottom: 1px solid #3c3c3c;
+}
+
+.title {
+	margin-bottom: 6px;
+
+	color: #e7e7e7;
+
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.titleAccent {
+	color: #3794ff;
+}
+
+.description {
+	color: #9d9d9d;
+
+	font-size: 13px;
+
+	line-height: 1.5;
+}
+
+.content {
+	margin-bottom: 20px;
+}
+
+.commentsSection {
+	margin-bottom: 20px;
+}
+
+.buttons {
+	display: flex;
+
+	gap: 8px;
+
+	justify-content: flex-start;
+
+	padding-top: 12px;
+
+	border-top: 1px solid #3c3c3c;
+}
+
+.validationHint {
+	margin-bottom: 12px;
+
+	color: #9d9d9d;
+
+	font-size: 12px;
+}
+
+.poweredBy {
+	margin-top: 16px;
+
+	color: #6e6e6e;
+
+	font-size: 11px;
+
+	text-align: center;
+}

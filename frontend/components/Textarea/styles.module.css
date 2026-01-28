@@ -1,0 +1,45 @@
+.textarea {
+	width: 100%;
+	min-height: 60px;
+
+	padding: 8px 10px;
+
+	transition: border-color 100ms ease;
+
+	border: 1px solid #3c3c3c;
+
+	background: #3c3c3c;
+
+	color: #ccc;
+
+	font-family: inherit;
+	font-size: 13px;
+
+	resize: vertical;
+
+	&::placeholder {
+		color: #6e6e6e;
+	}
+
+	&:focus {
+		border-color: #007acc;
+
+		outline: none;
+	}
+
+	&:disabled {
+		background: #2d2d2d;
+
+		color: #6e6e6e;
+
+		cursor: not-allowed;
+	}
+}
+
+.compact {
+	min-height: 36px;
+
+	padding: 6px 8px;
+
+	resize: none;
+}

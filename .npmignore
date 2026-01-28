@@ -1,0 +1,29 @@
+# Source files
+assets/
+frontend/
+mcp/
+scripts/
+
+# Documentation
+CONTRIBUTING.md
+docs/
+
+# Configuration
+.github/
+.vscode/
+eslint.config.mjs
+postcss.config.mjs
+stylelint.config.js
+tsconfig.base.json
+tsconfig.json
+tsconfig.node.json
+vite.config.ts
+
+# Development
+*.tgz
+.npm/
+coverage/
+*.local
+
+# Private stuff
+private/

@@ -1,0 +1,41 @@
+.button {
+	padding: 6px 14px;
+
+	transition: background-color 100ms ease;
+
+	border: none;
+
+	font-family: inherit;
+	font-size: 13px;
+	font-weight: 400;
+
+	cursor: pointer;
+}
+
+.primary {
+	background: #0078d4;
+
+	color: #fff;
+}
+
+.primary:hover:not(:disabled) {
+	background: #1c8ae6;
+}
+
+.primary:disabled {
+	opacity: 0.4;
+
+	cursor: not-allowed;
+}
+
+.secondary {
+	border: 1px solid #6e6e6e;
+
+	background: transparent;
+
+	color: #ccc;
+}
+
+.secondary:hover {
+	background: #3c3c3c;
+}

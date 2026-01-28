@@ -1,0 +1,63 @@
+{
+	"name": "mcp-popup-ui",
+	"version": "0.1.0",
+	"description": "MCP server that provides interactive popup UI tools for user input collection",
+	"type": "module",
+	"main": "dist/index.js",
+	"bin": {
+		"mcp-popup-ui": "dist/index.js"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc --project mcp/tsconfig.json && vite build",
+		"dev": "vite --open",
+		"test:server": "node scripts/test-server.mjs",
+		"lint": "lint tsc --tsconfig=\"./frontend/tsconfig.json\" && lint tsc --tsconfig=\"./mcp/tsconfig.json\"  && lint --tsconfig=\"./tsconfig.node.json\" ts css --include=\"frontend/**/*.css\" md audit"
+	},
+	"keywords": [
+		"mcp",
+		"model-context-protocol",
+		"popup",
+		"ui",
+		"user-input",
+		"llm",
+		"ai"
+	],
+	"author": "Jens Duttke (https://www.duttke.de)",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jens-duttke/mcp-popup-ui.git"
+	},
+	"homepage": "https://github.com/jens-duttke/mcp-popup-ui#readme",
+	"bugs": {
+		"url": "https://github.com/jens-duttke/mcp-popup-ui/issues"
+	},
+	"dependencies": {
+		"@modelcontextprotocol/sdk": "1.25.3",
+		"open": "11.0.0"
+	},
+	"devDependencies": {
+		"@types/node": "25.0.10",
+		"@types/react": "19.2.10",
+		"@types/react-dom": "19.2.3",
+		"@vitejs/plugin-react": "5.1.2",
+		"linter-bundle": "^7.11.0",
+		"react": "19.2.4",
+		"react-dom": "19.2.4",
+		"typescript": "5.9.3",
+		"vite": "7.3.1"
+	},
+	"peerDependencies": {
+		"postcss-selector-parser": "*"
+	},
+	"overrides": {
+		"eslint": "9.39.1",
+		"globals": "16.5.0"
+	}
+}

@@ -1,0 +1,50 @@
+* {
+	box-sizing: border-box;
+
+	margin: 0;
+
+	padding: 0;
+}
+
+body {
+	display: flex;
+
+	align-items: flex-start;
+	justify-content: center;
+
+	min-height: 100vh;
+
+	padding: 24px;
+
+	background: #1e1e1e;
+
+	color: #ccc;
+
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Variable", "Segoe UI", system-ui, sans-serif;
+	font-size: 13px;
+}
+
+#root {
+	width: 100%;
+	max-width: 800px;
+}
+
+/* VS Code-style scrollbar */
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 0;
+
+	background: rgb(121 121 121 / 0.4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgb(121 121 121 / 0.7);
+}

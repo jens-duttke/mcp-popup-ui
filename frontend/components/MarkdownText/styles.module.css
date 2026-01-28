@@ -1,0 +1,22 @@
+.bold {
+	font-weight: 600;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.strikethrough {
+	text-decoration: line-through;
+}
+
+.code {
+	padding: 0.125em 0.375em;
+
+	border-radius: 3px;
+
+	background-color: rgb(255 255 255 / 0.08);
+
+	font-family: var(--vscode-editor-font-family, "Consolas", "Courier New", monospace);
+	font-size: 0.9em;
+}
