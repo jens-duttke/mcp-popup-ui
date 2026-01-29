@@ -4,6 +4,14 @@ An MCP (Model Context Protocol) server that lets AI assistants ask you questions
 
 ![MCP Popup UI in action with LM Studio](https://raw.githubusercontent.com/jens-duttke/mcp-popup-ui/main/assets/screenshot.jpg)
 
+> **📢 A Note on the Future**
+>
+> This project started as an experimental solution to a gap in the MCP ecosystem: letting AI assistants collect user input through a visual interface rather than plain text. It works today with any MCP-compatible client.
+>
+> The MCP specification now includes [MCP Apps](https://modelcontextprotocol.io/docs/extensions/apps) - an official extension that embeds interactive UIs directly in the chat conversation. This provides a better user experience (no browser popup, no context switching) and will eventually be the recommended approach.
+>
+> **For now**, mcp-popup-ui remains useful because MCP Apps support is still limited to a few clients (Claude, VS Code Insiders, Goose, Postman, MCPJam). Once MCP Apps becomes widely available, consider migrating to an MCP Apps-based solution for the best experience.
+
 ## What This Does
 
 When you chat with an AI assistant (like GitHub Copilot, Claude, or a local LLM), the AI sometimes needs your input - for example, "Which framework do you want?" or "Select the features to include."
